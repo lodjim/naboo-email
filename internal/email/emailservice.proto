@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package email;
+
+option go_package = ".";
+
+service Email {  
+  rpc sendEmail (SendEmailRequest) returns (SendEmailReply) {}
+}
+
+message SendEmailRequest {
+  string subject = 1;
+  string message = 2;
+  string emailTarget = 3;
+}
+
+message SendEmailReply {
+  string message = 1;
+}
