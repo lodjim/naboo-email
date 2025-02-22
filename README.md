@@ -31,20 +31,20 @@ The Naboo Email Server is built in Go and exposes a gRPC API for sending emails.
 
 ## Setup & Configuration
 
-Before running the server, you must set up the following environment variables:
+Before running the server, you must create a `.env` file in `cmd` folder and add these variables:
 
 - `EMAIL_ADDRESS`: The email address to send from.
 - `EMAIL_PWD`: The password for the sender's email account.
 - `SMTP_HOST`: The hostname of your SMTP server.
 - `SMTP_PORT`: The port for the SMTP server.
 
-### Example (Linux/macOS)
+### Example
 
 ```bash
-export EMAIL_ADDRESS="your-email@example.com"
-export EMAIL_PWD="your-email-password"
-export SMTP_HOST="smtp.example.com"
-export SMTP_PORT="465"
+EMAIL_ADDRESS="your-email@example.com"
+EMAIL_PWD="your-email-password"
+SMTP_HOST="smtp.example.com"
+SMTP_PORT="465"
 ```
 
 ### Build & Run
