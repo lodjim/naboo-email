@@ -9,6 +9,8 @@ import (
 	"net/smtp"
 	"os"
 
+	_ "github.com/joho/godotenv/autoload"
+
 	pb "github.com/lodjim/naboo-email/internal/email"
 	"google.golang.org/grpc"
 )
