@@ -12,7 +12,7 @@ The Naboo Email Server is a gRPC-based service that sends emails via an SMTP ser
   - [EmailService](#emailservice)
   - [gRPC Service](#grpc-service)
 - [Usage](#usage)
-- [Run Server](#run-server)
+- [Regenerate pb files](#regenerate-pbfiles)
 - [Error Handling & Future Enhancements](#error-handling--future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
@@ -66,6 +66,7 @@ SMTP_PORT="465"
 3. **Build the Project**
 
    ```bash
+   cd cmd
    go build -o naboo-email-server
    ```
 
@@ -167,7 +168,7 @@ func (s *server) SendEmail(ctx context.Context, in *pb.SendEmailRequest) (*pb.Se
 }
 ```
 
-#### Usage
+## Usage
 
 Once the server is running, clients can send a gRPC request to the `SendEmail` method. The request is expected to conform to the protocol buffer definition similar to:
 
@@ -183,22 +184,12 @@ message SendEmailReply {
 }
 ```
 
-#### Regenerate pb files
-
 To regenerate **`pb.go`** needed to communicate via gRPC, run the following command :
 
 ```bash
 protoc --go_out=. --go_opt=paths=source_relative \
        --go-grpc_out=. --go-grpc_opt=paths=source_relative \
        internal/email/emailservice.proto
-```
-
-## Run Server
-
-To run the server, move into `cmd` folder and launch the program.
-```bash
-cd cmd
-go run .
 ```
 
 A sample client might send the following request:
