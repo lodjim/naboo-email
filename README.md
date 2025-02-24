@@ -65,6 +65,7 @@ SMTP_PORT="465"
 3. **Build the Project**
 
    ```bash
+   cd cmd
    go build -o naboo-email-server
    ```
 
@@ -180,6 +181,14 @@ message SendEmailRequest {
 message SendEmailReply {
     string message = 1;
 }
+```
+
+To regenerate **`pb.go`** needed to communicate via gRPC, run the following command :
+
+```bash
+protoc --go_out=. --go_opt=paths=source_relative \
+       --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+       internal/email/emailservice.proto
 ```
 
 A sample client might send the following request:
