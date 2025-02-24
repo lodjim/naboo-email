@@ -12,7 +12,6 @@ The Naboo Email Server is a gRPC-based service that sends emails via an SMTP ser
   - [EmailService](#emailservice)
   - [gRPC Service](#grpc-service)
 - [Usage](#usage)
-- [Regenerate pb files](#regenerate-pbfiles)
 - [Error Handling & Future Enhancements](#error-handling--future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
