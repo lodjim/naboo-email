@@ -1,9 +1,9 @@
 
 # Naboo Email Server
 
-[![Docker Image](https://img.shields.io/docker/v/USERNAME/naboo-email?label=docker&logo=docker)](https://hub.docker.com/r/USERNAME/naboo-email)
-[![Docker Image Size](https://img.shields.io/docker/image-size/USERNAME/naboo-email/latest)](https://hub.docker.com/r/USERNAME/naboo-email)
-[![Docker Pulls](https://img.shields.io/docker/pulls/USERNAME/naboo-email)](https://hub.docker.com/r/USERNAME/naboo-email)
+[![Docker Image](https://img.shields.io/docker/v/cifope/naboo-email?label=docker&logo=docker)](https://hub.docker.com/r/cifope/naboo-email)
+[![Docker Image Size](https://img.shields.io/docker/image-size/cifope/naboo-email/latest)](https://hub.docker.com/r/cifope/naboo-email)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cifope/naboo-email)](https://hub.docker.com/r/cifope/naboo-email)
 [![License](https://img.shields.io/github/license/lodjim/naboo-email)](LICENSE)
 
 The Naboo Email Server is a gRPC-based Go application for securely sending emails via SMTP with TLS encryption. It incorporates an SMTP client connection pooling mechanism to enhance performance, reliability, and scalability. Ideal for public use, the project is open-source on GitHub.
@@ -35,7 +35,7 @@ The fastest way to get started is using our pre-built Docker images:
 
 ```bash
 # Pull the latest image
-docker pull USERNAME/naboo-email:latest
+docker pull cifope/naboo-email:latest
 
 # Run the server
 docker run -d \
@@ -46,7 +46,7 @@ docker run -d \
   -e SMTP_HOST="smtp.example.com" \
   -e SMTP_PORT="465" \
   -e POOL_SIZE="10" \
-  USERNAME/naboo-email:latest
+  cifope/naboo-email:latest
 ```
 
 Available tags:
