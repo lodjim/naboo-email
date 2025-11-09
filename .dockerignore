@@ -1,3 +1,49 @@
-Makefile
-main
+# Git files
+.git
+.gitignore
+.github
+
+# Environment files
 .env
+.env.*
+*.env
+
+# Documentation
+*.md
+LICENSE
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Build artifacts
+main
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+*_test.go
+testdata/
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+
+# Makefile
+MakeFile
+Makefile
